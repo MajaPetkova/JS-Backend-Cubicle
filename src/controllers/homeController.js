@@ -1,7 +1,9 @@
-exports.index = (req, res) => {
-    res.render('index')
-};
+  const cubes = require('../db.json')
 
-exports.about = (req, res) => {
-    res.render('about')
-}
+  exports.index = (req, res) => {
+      res.render('index', { cubes })
+  };
+
+  exports.about = (req, res) => {
+      res.render('about')
+  }
