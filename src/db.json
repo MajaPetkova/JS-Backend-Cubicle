@@ -1,1 +1,21 @@
-"cubes"
+[{
+        "id": 0,
+        "name": "Cube1",
+        "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
+        "difficultyLevel": 3
+    },
+    {
+        "id": 1,
+        "name": "ECO-2",
+        "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
+        "difficultyLevel": 1
+    }, {
+        "id": 2,
+        "name": "JS Eco 3",
+        "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
+        "difficultyLevel": 6
+    }
+
+
+
+]
