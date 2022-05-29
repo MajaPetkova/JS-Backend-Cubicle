@@ -1,27 +1,30 @@
 const router = require('express').Router();
-const cubes = require('../db.json');
-const fs = require('fs/promises');
-const path = require('path')
+const cubeService = require('../services/cubeService')
 
 
 router.get('/create', (req, res) => {
     res.render('create')
 });
 
-router.post('/create', (req, res) => {
+router.post('/create', async(req, res) => {
     const cube = req.body;
+    //Validate
     if (cube.name == '') {
         res.status(404).send('Please insert name')
         return
     }
+    //save data
+    try {
+        await cubeService.save(cube)
+        res.redirect('/')
 
-    cubes.push(cube);
-    fs.writeFile(path.resolve('src', 'db.json'), JSON.stringify(cubes, '', 4))
-        .then(() => {
-            res.redirect('/')
-        })
-        .catch(err => {
-            res.status(400).send(err)
-        })
+    } catch (error) {
+        res.status(400).send(err)
+
+    }
 });
+
+router.get('/details/:id', (req, res) => {
+    res.render('details')
+})
 module.exports = router;
