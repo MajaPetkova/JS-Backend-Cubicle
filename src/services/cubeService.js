@@ -14,7 +14,8 @@ exports.getAll = async(search = '', fromInput, toInput) => {
     //     .filter(x => x.difficultyLevel >= from && x.difficultyLevel <= to)
     return cubes;
 };
-exports.getOne = (cubeId) => Cube.findById(cubeId).populate('accessories');
+exports.getOne = (cubeId) => Cube.findById(cubeId);
+exports.getOneDetails = (cubeId) => Cube.findById(cubeId).populate('accessories');
 
 // nested population
 // .populate({
