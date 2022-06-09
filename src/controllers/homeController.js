@@ -1,5 +1,4 @@
   const router = require('express').Router();
-  //   const cubes = require('../db.json');
   const cubeService = require('../services/cubeService')
 
 
