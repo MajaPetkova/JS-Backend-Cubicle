@@ -23,7 +23,7 @@ exports.register =async ({username, password, repeatPassword}) =>{
 };
 exports.login= async ({username, password})=>{
     let user= await User.findOne({username});
-         console.log(user.password)
+        //  console.log(user.password)
     if(!user){
         // todo:message
         return ;
