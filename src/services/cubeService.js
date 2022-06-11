@@ -30,6 +30,9 @@ exports.getOneDetails = (cubeId) => Cube.findById(cubeId).populate('accessories'
 // }
 // })
 
+exports.edit = (cubeId, cubeData) => Cube.findByIdAndUpdate(cubeId, cubeData);
+
+
 exports.create = (cube) => Cube.create(cube);
 
 exports.attachAccessory = async(cubeId, accessoryId) => {
@@ -42,4 +45,4 @@ exports.attachAccessory = async(cubeId, accessoryId) => {
     await cube.save();
     await accessory.save();
     return cube;
-}
+};
