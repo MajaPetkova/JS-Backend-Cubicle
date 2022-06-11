@@ -16,7 +16,16 @@ router.post('/register', async(req, res) => {
         // todo: add notification
         res.redirect('404')
     }
-// console.log(createdUser)
+  // console.log(createdUser)
 
 });
+
+router.get('/login',(req, res)=>{
+    res.render('auth/login')
+});
+router.post('/login', (req, res)=>{
+    console.log(req.body);
+    res.end();
+})
+
 module.exports = router;
