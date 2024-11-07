@@ -19,5 +19,5 @@ initializedatabase()
 
     })
     .catch((err) => {
-        console.log('Can not conect to db:', err)
+        console.log('Can not connect to db:', err)
     })
