@@ -1,12 +1,12 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 
-const { initializedatabase } = require('./config/database')
-const { auth } = require('./middlewares/authMiddleware')
-const routes = require('./routes');
+const { initializedatabase } = require('./src/config/database')
+const { auth } = require('./src/middlewares/authMiddleware')
+const routes = require('./src/routes');
 
 const app = express();
-require('./config/handlebars')(app);
+require('./src/config/handlebars')(app);
 app.use('/static', express.static('public'));
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }))
